@@ -1,6 +1,6 @@
 /**@jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { getSpace } from "../lib/variables";
+import { getSpace, viewportM } from "../lib/variables";
 import { SettinCubeType } from "./SettingCubeType";
 import { SettingCubeView } from "./SettingCubeView";
 import { VisualizerType } from "sr-puzzlegen/dist/lib/visualizer/enum";
@@ -47,4 +47,7 @@ const containerStyle = css({
   overflowY: "scroll",
   padding: getSpace(2),
   width: "50%",
+  ...viewportM({
+    width: "100%",
+  }),
 });

@@ -5,7 +5,7 @@ import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { Setting } from "./Setting";
 import { Preview } from "./Preview";
-import { Colors, getSpace } from "../lib/variables";
+import { Colors, getSpace, viewportM } from "../lib/variables";
 import { StyleReset } from "./StyleReset";
 import { useCubeRender } from "../cubeRenderHook";
 
@@ -37,4 +37,10 @@ const containerStyle = css({
   height: "calc(100vh - 64px - 64px)",
   padding: getSpace(2),
   width: "100%",
+  ...viewportM({
+    alignItems: "center",
+    flexDirection: "column",
+    height: "initial",
+    padding: 0,
+  }),
 });

@@ -68,4 +68,5 @@ const containerStyle = css({
   display: "flex",
   gap: getSpace(1),
   marginTop: getSpace(1),
+  width: "100%",
 });

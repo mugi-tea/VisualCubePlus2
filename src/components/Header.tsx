@@ -2,7 +2,7 @@
 import { css } from "@emotion/react";
 
 export const Header = () => {
-  return <header css={wrapperStyle}>header</header>;
+  return <header css={wrapperStyle}>under development</header>;
 };
 
 const wrapperStyle = css({

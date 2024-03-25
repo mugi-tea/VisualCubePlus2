@@ -14,6 +14,7 @@ export const SettinCubeType = ({ type, setType }: Props) => {
   return (
     <div css={containerStyle}>
       <GeneralButton
+        css={buttonStyle}
         onClick={() => {
           if (type.includes("net")) {
             setType(Type.CUBE_NET);
@@ -29,6 +30,7 @@ export const SettinCubeType = ({ type, setType }: Props) => {
         キューブ
       </GeneralButton>
       <GeneralButton
+        css={buttonStyle}
         onClick={() => {
           if (type.includes("net")) {
             setType(Type.MEGAMINX_NET);
@@ -44,6 +46,7 @@ export const SettinCubeType = ({ type, setType }: Props) => {
         メガミンクス
       </GeneralButton>
       <GeneralButton
+        css={buttonStyle}
         onClick={() => {
           if (type.includes("net")) {
             setType(Type.PYRAMINX_NET);
@@ -57,6 +60,7 @@ export const SettinCubeType = ({ type, setType }: Props) => {
         ピラミンクス
       </GeneralButton>
       <GeneralButton
+        css={buttonStyle}
         onClick={() => {
           if (type.includes("net")) {
             setType(Type.SKEWB_NET);
@@ -70,6 +74,7 @@ export const SettinCubeType = ({ type, setType }: Props) => {
         スキューブ
       </GeneralButton>
       <GeneralButton
+        css={buttonStyle}
         onClick={() => {
           if (type.includes("net")) {
             setType(Type.SQUARE1_NET);
@@ -86,8 +91,13 @@ export const SettinCubeType = ({ type, setType }: Props) => {
   );
 };
 
+const buttonStyle = css({
+  width: `calc(50% - ${getSpace(1 / 2)}px)`,
+});
+
 const containerStyle = css({
   display: "flex",
+  flexWrap: "wrap",
   gap: getSpace(1),
   width: "100%",
 });

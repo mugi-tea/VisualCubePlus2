@@ -6,19 +6,22 @@ import { css } from "@emotion/react";
 
 type Props = {
   children: ReactNode;
-  pressed?: boolean;
+  className?: string;
   onClick: () => void;
+  pressed?: boolean;
   width: string | number;
 };
 
 export const GeneralButton = ({
-  pressed = false,
   children,
+  className,
   onClick,
+  pressed = false,
   width,
 }: Props) => {
   return (
     <button
+      className={className}
       css={buttonStyle({ pressed: pressed, width: width })}
       onClick={onClick}
     >
@@ -36,6 +39,7 @@ const buttonStyle = ({ pressed, width }: ButtonStyle) => {
   return css({
     borderRadius: 16,
     boxShadow: `${pressed ? Shadow.inset : Shadow.normal}`,
+    boxSizing: "border-box",
     fontWeight: "bold",
     padding: getSpace(2),
     transition: "ease all 0.2s",

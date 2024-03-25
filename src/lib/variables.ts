@@ -1,3 +1,5 @@
+import { CSSObject } from "@emotion/react";
+
 const spaceBaseSize = 8;
 
 export const getSpace = (size: number) => spaceBaseSize * size;
@@ -15,3 +17,7 @@ export const Shadow = {
   normal: `4px 4px 4px 0px ${Colors.shadow}, -4px -4px 4px 0px #ffffff`,
   inset: `inset 4px 4px 4px 0px ${Colors.shadow}, inset -4px -4px 4px 0px #ffffff`,
 };
+
+export const viewportM = (style: CSSObject): CSSObject => ({
+  "@media (max-width: 1100px)": style,
+});

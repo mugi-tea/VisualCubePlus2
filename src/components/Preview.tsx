@@ -1,5 +1,6 @@
 /**@jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
+import { viewportM } from "../lib/variables";
 
 export const Preview = () => {
   return (
@@ -15,4 +16,7 @@ const containerStyle = css({
   justifyContent: "center",
   overflow: "hidden",
   width: "50%",
+  ...viewportM({
+    width: "100%",
+  }),
 });
