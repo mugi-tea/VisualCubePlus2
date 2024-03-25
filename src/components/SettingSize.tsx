@@ -7,6 +7,6 @@ type Props = {
   setConfig: React.Dispatch<React.SetStateAction<PNGVisualizerOptions>>;
 };
 
-export const SettingSize = ({ config, setConfig }: Props) => {
+export const SettingSize = ({}: Props) => {
   return <div css={{ marginTop: getSpace(2) }}></div>;
 };

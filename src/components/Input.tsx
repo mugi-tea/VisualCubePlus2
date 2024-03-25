@@ -1,7 +1,6 @@
 /**@jsxImportSource @emotion/react */
 
 import { css } from "@emotion/react";
-import { Shadow } from "../lib/variables";
 
 type Props = {
   onChange: React.ChangeEventHandler<HTMLInputElement>;
