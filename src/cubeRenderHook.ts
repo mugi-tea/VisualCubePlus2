@@ -7,6 +7,11 @@ export const useCubeRender = () => {
   const [config, setConfig] = useState<PNGVisualizerOptions>({});
 
   useEffect(() => {
+    if (config.puzzle?.size === undefined)
+      setConfig({ ...config, puzzle: { ...config.puzzle, size: 3 } });
+  }, []);
+
+  useEffect(() => {
     const canvasRendererDiv = document.querySelector(
       ".canvas-renderer"
     ) as HTMLElement;

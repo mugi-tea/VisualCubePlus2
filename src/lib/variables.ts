@@ -6,6 +6,7 @@ export const getSpace = (size: number) => spaceBaseSize * size;
 
 export const Colors = {
   baseColor: "#f7f7f7",
+  fontColor: "#222222",
   grayDark: "#4D4D4D",
   gray: "#808080",
   grayLight: "#CCCCCC",

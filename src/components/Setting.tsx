@@ -24,19 +24,6 @@ export const Setting = ({ config, type, setConfig, setType }: Props) => {
       <SettingSize config={config} setConfig={setConfig} />
       <SettingAlg config={config} setConfig={setConfig} />
       <SettingCase config={config} setConfig={setConfig} />
-      <button
-        onClick={() =>
-          setConfig({
-            ...config,
-            puzzle: {
-              ...config.puzzle,
-              size: config.puzzle?.size ? config.puzzle.size + 1 : 3,
-            },
-          })
-        }
-      >
-        hoge
-      </button>
     </div>
   );
 };

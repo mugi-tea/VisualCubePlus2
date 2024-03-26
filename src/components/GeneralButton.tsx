@@ -9,7 +9,7 @@ type Props = {
   className?: string;
   onClick: () => void;
   pressed?: boolean;
-  width: string | number;
+  width?: string | number;
 };
 
 export const GeneralButton = ({
@@ -17,7 +17,7 @@ export const GeneralButton = ({
   className,
   onClick,
   pressed = false,
-  width,
+  width = "initial",
 }: Props) => {
   return (
     <button
@@ -40,7 +40,6 @@ const buttonStyle = ({ pressed, width }: ButtonStyle) => {
     borderRadius: 16,
     boxShadow: `${pressed ? Shadow.inset : Shadow.normal}`,
     boxSizing: "border-box",
-    fontWeight: "bold",
     padding: getSpace(2),
     transition: "ease all 0.2s",
     width: width,

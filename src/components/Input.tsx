@@ -1,16 +1,24 @@
 /**@jsxImportSource @emotion/react */
 
 import { css } from "@emotion/react";
+import { Shadow, getSpace } from "../lib/variables";
 
 type Props = {
+  className?: string;
   onChange: React.ChangeEventHandler<HTMLInputElement>;
   placeholder?: string;
   value?: string;
 };
 
-export const Input = ({ value = "", placeholder = "", onChange }: Props) => {
+export const Input = ({
+  className,
+  value = "",
+  placeholder = "",
+  onChange,
+}: Props) => {
   return (
     <input
+      className={className}
       css={inputStyle}
       onChange={onChange}
       placeholder={placeholder}
@@ -21,7 +29,7 @@ export const Input = ({ value = "", placeholder = "", onChange }: Props) => {
 };
 
 const inputStyle = css({
-  borderRadius: 8,
-  boxShadow: "0px 0px 8px 4px #dedede",
-  padding: 16,
+  borderRadius: 16,
+  boxShadow: Shadow.normal,
+  padding: getSpace(2),
 });

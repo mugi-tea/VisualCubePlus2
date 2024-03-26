@@ -1,5 +1,6 @@
 /**@jsxImportSource @emotion/react */
 import { Global, css } from "@emotion/react";
+import { Colors } from "../lib/variables";
 
 export const StyleReset = () => {
   return (
@@ -80,9 +81,11 @@ export const StyleReset = () => {
           audio,
           video {
             font-family: "Poppins", sans-serif;
+            color: ${Colors.fontColor}
             padding: 0;
             margin: 0;
             font-size: 100%;
+            font-weight: bold;
             vertical-align: baseline;
             background: transparent;
             border: 0;

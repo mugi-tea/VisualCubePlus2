@@ -13,6 +13,7 @@ export const SettingCase = ({ config, setConfig }: Props) => {
   return (
     <div css={{ marginTop: getSpace(2) }}>
       <Input
+        css={{ width: "100%" }}
         onChange={(e) => {
           setConfig({
             ...config,
