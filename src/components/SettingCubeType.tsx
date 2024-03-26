@@ -4,6 +4,7 @@ import { GeneralButton } from "./GeneralButton";
 import { Type } from "sr-puzzlegen";
 import { getSpace } from "../lib/variables";
 import { VisualizerType } from "sr-puzzlegen/dist/lib/visualizer/enum";
+import { viewportM } from "../lib/variables";
 
 type Props = {
   type: VisualizerType;
@@ -25,7 +26,6 @@ export const SettinCubeType = ({ type, setType }: Props) => {
           }
         }}
         pressed={type.includes("cube")}
-        width={"20%"}
       >
         キューブ
       </GeneralButton>
@@ -41,7 +41,6 @@ export const SettinCubeType = ({ type, setType }: Props) => {
           }
         }}
         pressed={type.includes("megaminx")}
-        width={"20%"}
       >
         メガミンクス
       </GeneralButton>
@@ -55,7 +54,6 @@ export const SettinCubeType = ({ type, setType }: Props) => {
           }
         }}
         pressed={type.includes("pyraminx")}
-        width={"20%"}
       >
         ピラミンクス
       </GeneralButton>
@@ -69,7 +67,6 @@ export const SettinCubeType = ({ type, setType }: Props) => {
           }
         }}
         pressed={type.includes("skewb")}
-        width={"20%"}
       >
         スキューブ
       </GeneralButton>
@@ -83,7 +80,6 @@ export const SettinCubeType = ({ type, setType }: Props) => {
           }
         }}
         pressed={type.includes("square1")}
-        width={"20%"}
       >
         Square 1
       </GeneralButton>
@@ -92,7 +88,11 @@ export const SettinCubeType = ({ type, setType }: Props) => {
 };
 
 const buttonStyle = css({
-  width: `calc(50% - ${getSpace(1 / 2)}px)`,
+  flexGrow: 1,
+  ...viewportM({
+    flexGrow: 0,
+    width: `calc(50% - ${getSpace(1 / 2)}px)`,
+  }),
 });
 
 const containerStyle = css({

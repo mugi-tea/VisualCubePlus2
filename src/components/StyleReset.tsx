@@ -115,6 +115,7 @@ export const StyleReset = () => {
             color: inherit;
             text-decoration: none;
             outline: none;
+            -webkit-tap-highlight-color: transparent;
           }
 
           a:visited {
@@ -134,6 +135,7 @@ export const StyleReset = () => {
             -webkit-appearance: none;
             -moz-appearance: none;
             appearance: none;
+            -webkit-tap-highlight-color: transparent;
           }
 
           textarea {
