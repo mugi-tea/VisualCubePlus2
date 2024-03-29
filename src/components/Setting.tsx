@@ -8,6 +8,7 @@ import { PNGVisualizerOptions } from "sr-puzzlegen";
 import { SettingAlg } from "./SettingAlg";
 import { SettingCase } from "./SettingCase";
 import { SettingSize } from "./SettingSize";
+import { SettingScale } from "./SettingScale";
 
 type Props = {
   config: PNGVisualizerOptions;
@@ -24,6 +25,7 @@ export const Setting = ({ config, type, setConfig, setType }: Props) => {
       <SettingSize config={config} setConfig={setConfig} />
       <SettingAlg config={config} setConfig={setConfig} />
       <SettingCase config={config} setConfig={setConfig} />
+      <SettingScale config={config} setConfig={setConfig} />
     </div>
   );
 };
