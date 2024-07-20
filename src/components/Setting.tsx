@@ -9,6 +9,7 @@ import { SettingAlg } from "./SettingAlg";
 import { SettingCase } from "./SettingCase";
 import { SettingSize } from "./SettingSize";
 import { SettingScale } from "./SettingScale";
+import { SettingRotation } from "./SettingRotation";
 
 type Props = {
   config: PNGVisualizerOptions;
@@ -26,6 +27,7 @@ export const Setting = ({ config, type, setConfig, setType }: Props) => {
       <SettingAlg config={config} setConfig={setConfig} />
       <SettingCase config={config} setConfig={setConfig} />
       <SettingScale config={config} setConfig={setConfig} />
+      <SettingRotation config={config} setConfig={setConfig} />
     </div>
   );
 };

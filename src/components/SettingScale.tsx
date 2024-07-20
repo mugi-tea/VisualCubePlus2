@@ -10,7 +10,14 @@ type Props = {
 
 export const SettingScale = ({ config, setConfig }: Props) => {
   return (
-    <div css={{ alignItems: "center", display: "flex", gap: getSpace(1) }}>
+    <div
+      css={{
+        alignItems: "center",
+        display: "flex",
+        gap: getSpace(1),
+        marginTop: getSpace(1),
+      }}
+    >
       <input
         type="range"
         css={{
@@ -28,8 +35,9 @@ export const SettingScale = ({ config, setConfig }: Props) => {
             puzzle: { ...config.puzzle, scale: Number(e.target.value) * 0.1 },
           });
         }}
+        value={Math.floor((config.puzzle?.scale ?? 1) * 10)}
       />
-      <div>{Math.floor((config.puzzle?.scale ?? 0) * 10) / 10}</div>
+      <div>{Math.floor((config.puzzle?.scale ?? 1) * 10) / 10}</div>
     </div>
   );
 };
